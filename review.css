@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #000;
+  color: #fff;
+  font-family: Georgia, serif;
+  line-height: 1.4;
+}
+img { max-width: 100%; display: block; }
+
+.review-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto 120px;
+  text-align: center;
+  position: relative;
+}
+.review-container {
+  position: relative;
+  padding: 40px 20px;
+  min-height: 220px;
+}
+.quote {
+  font-size: 60px;
+  color: #D35400;
+  position: absolute;
+}
+.quote-start {
+  top: 0;
+  left: 10px;
+}
+.quote-end {
+  bottom: 0;
+  right: 10px;
+}
+.reviews .review {
+  display: none;
+  transition: opacity 0.3s ease;
+}
+.reviews .review.active {
+  display: block;
+}
+.reviews h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #D35400;
+}
+.reviews p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.review-author {
+  font-weight: bold;
+}
+.review-location {
+  font-style: italic;
+  color: #ccc;
+}
+
+.arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.arrow {
+  pointer-events: auto;
+  font-size: 2rem;
+  color: #D35400;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+}
+.bottom-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 15px 0;
+}
+.bottom-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.bottom-nav .active a {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+}
+.bottom-nav .btn {
+  background: #fff;
+  color: #333;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .quote { font-size: 40px; }
+  .reviews h1 { font-size: 1.5rem; }
+  .reviews p { font-size: 1rem; }
+  .arrow { font-size: 1.5rem; }
+  .bottom-nav ul { gap: 1rem; }
+  .bottom-nav a { font-size: 0.9rem; }
+}
+
+.navbar .menu-toggle, .navbar .watch-icon {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color .3s;
+}
+.navbar .menu-toggle:hover, .navbar .watch-icon:hover { color: #fff; }
+
+#logo-gril{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 700px;
+}
+

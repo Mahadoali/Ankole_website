@@ -1,0 +1,173 @@
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(Images/65e5b8b549a7aac5dba0e7d3_ankole_kilimani_nightlife\ \(1\).jpg) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-main {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  max-width: 1200px;
+  gap: 40px;
+  color: white;
+  text-align: center;
+}
+
+.menu-section1, .menu-section2 {
+  flex: 1;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-section1::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.menu-main h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: #e57c52;
+}
+
+.menu-main h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.menu-main p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-transform: lowercase;
+  position: relative;
+  display: inline-block;
+}
+
+.menu-main p::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .menu-main {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .menu-section1::after {
+    content: none;
+  }
+}
+
+.hero-nav {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 50px;
+  gap: 20px;
+  overflow-x: auto;
+  max-width: 90vw;
+}
+
+.hero-nav::-webkit-scrollbar {
+  height: 6px;
+}
+.hero-nav::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}
+
+.hero-nav .menu-toggle,
+.hero-nav .watch-icon {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.5rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color .3s;
+}
+.hero-nav .menu-toggle:hover,
+.hero-nav .watch-icon:hover {
+  color: #fff;
+}
+
+.hero-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.hero-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .3s;
+}
+.hero-nav ul li a:hover,
+.hero-nav ul li a.active {
+  color: #ddd;
+}
+
+.hero-nav .reservation-btn {
+  padding: 10px 25px;
+  background: #777;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background .3s;
+  white-space: nowrap;
+}
+.hero-nav .reservation-btn:hover {
+  background: #555;
+}
+
+
+
+
+
+
+
+
+
+
+

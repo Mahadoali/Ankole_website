@@ -1,0 +1,117 @@
+body{
+  
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { height: 100%; font-family: 'Work Sans', sans-serif; }
+
+body {
+  background-image: url(Images/65e5b8b549a7aac5dba0e7d3_ankole_kilimani_nightlife\ \(1\).jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.event-section{
+  position: relative;
+  padding-top: 120px;
+}
+
+.event-text{
+  display: flex;
+  color: white;
+  font-size: x-large;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+#pavilion{
+  color: gray;
+}
+
+.inner-text{
+  color: rgb(255, 195, 45);
+}
+
+#event-image{
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.nav-wrapper {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .menu-toggle, .navbar .watch-icon {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.navbar .menu-toggle:hover, .navbar .watch-icon:hover { 
+  color: #fff; 
+}
+
+.navbar ul { 
+  list-style: none; 
+  display: flex; 
+  gap: 30px; 
+}
+
+.navbar ul li a { 
+  color: #fff; 
+  text-decoration: none; 
+  font-weight: 500; 
+  transition: color .3s; 
+}
+
+.navbar ul li a:hover, .navbar ul li a.active { 
+  color: #ddd; 
+}
+
+.navbar .btn-reserve {
+  padding: 10px 25px;
+  background: #777;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .3s;
+}
+
+.navbar .btn-reserve:hover { 
+  background: #555; 
+}
+
+.whatsapp-icon {
+  font-size: 2rem;
+  color: #25D366;
+  transition: color .3s;
+  cursor: pointer;
+}
+
+.whatsapp-icon:hover { 
+  color: #1da851; 
+}

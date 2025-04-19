@@ -1,0 +1,81 @@
+body {
+  background-image: url(Images/65e5b8b549a7aac5dba0e7d3_ankole_kilimani_nightlife\ \(1\).jpg);
+  font-family: 'Work Sans', sans-serif;
+}
+.contact-section {
+  position: relative;
+}
+.contac-kitisuru {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+  font-size: x-large;
+}
+.contact {
+  border: 2px solid white;
+  padding: 20px;
+  background-color: rgba(128, 128, 128, 0.062);
+  margin-top: 150px;
+}
+.kilimani-contact {
+  border: 3px solid white;
+}
+.contact-image {
+  position: absolute;
+  left: 700px;
+}
+
+.nav-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+nav.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+nav.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+nav.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+nav.navbar ul li a:hover,
+nav.navbar ul li a.active {
+  color: #ddd;
+}
+.navbar .menu-toggle, .navbar .watch-icon {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color .3s;
+}
+.navbar .menu-toggle:hover, .navbar .watch-icon:hover { color: #fff; }
+
+.navbar .btn-reserve {
+  padding: 10px 25px;
+  background: #777;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .3s;
+}
+.navbar .btn-reserve:hover { background: #555; }
