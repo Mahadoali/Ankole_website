@@ -2,84 +2,80 @@
     body, html { height: 100%; font-family: 'Work Sans', sans-serif; }
 
     .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    }
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
 
-    .slideshow-image {
+  
+ 
+  @keyframes slideshow{
+      0%{opacity: 0;}
+      2%{opacity: 1;}
+      18%{opacity: 1;}
+      20%{opacity: 0;}
+      100%{opacity: 0;}
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .image img{
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      animation: imageAnimation 15s linear infinite;
-    }
+      max-width: 20em; max-height: 20em;
+      left: 20%; top: 17%;
+  }
+  .image h1{
+    left: 20%;
+  position:absolute ;
+     font-size: 10em;
+      color: grey;
+      margin-top: 24%
+      
+  }
+  .image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: imageAnimation 15s linear infinite
+    
+  }
 
-    .slideshow-image:nth-child(1) {
-      background-image: url('Images/65c5f9644676e29dddf08c65_ankolegrill_t-bone-steak-2024-1.jpg');
-    }
+  .image:nth-child(1){
+    background-image: url('Images/65c5f9644676e29dddf08c65_ankolegrill_t-bone-steak-2024-1.jpg');
+    animation-delay: 0s;
+    background-size: cover;
+}
+.image:nth-child(2){
+    background-image: url('Images/65c3b0c67153d0056443f31e_ankolegrill_escobar1.jpg');
+    animation-delay: 5s;
+}
+.image:nth-child(3){
+    background-image: url("Images/65e5b8b549a7aac5dba0e7d3_ankole_kilimani_nightlife\ \(1\).jpg");
+    animation-delay: 10s;
+}
+.image:nth-child(4){
+    background-image: url("Images/65cb61d8c46dc657819e1cc2_ankolegrill_slider.jpg");
+    animation-delay: 15s;
+}
+.image:nth-child(5){
+    background-image: url("Images/65cb61d8c46dc657819e1cc2_ankolegrill_slider.jpg");
+    animation-delay: 20s;
+}
 
-    .slideshow-image:nth-child(2) {
-      background-image: url('Images/65e5b8b549a7aac5dba0e7d3_ankole_kilimani_nightlife\ \(1\).jpg');
-      animation-delay: 5s;
-    }
-
-    .slideshow-image:nth-child(3) {
-      background-image: url('Images/65cb61d8c46dc657819e1cc2_ankolegrill_slider.jpg');
-      animation-delay: 10s;
-    }
-    .slideshow-image:nth-child(4){
-      background-image: url('Images/65c3b0c67153d0056443f31e_ankolegrill_escobar1.jpg');
-    }
-
-    @keyframes imageAnimation {
-      0% {
-        opacity: 0;
-        transform: scale(1.1);
-      }
-      4% {
-        opacity: 1;
-      }
-      33% {
-        opacity: 1;
-      }
-      37% {
-        opacity: 0;
-        transform: scale(1);
-      }
-      100% {
-        opacity: 0;
-        transform: scale(1.1);
-      }
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 1;
-    }
-
-    .overlay-text {
-      position: absolute;
-      top: 40%;
-      width: 100%;
-      text-align: center;
-      color: rgba(255,255,255,0.85);
-      font-size: 5rem;
-      text-transform: lowercase;
-      letter-spacing: 0.1em;
-      z-index: 2;
-    }
 
     .social { 
       position: absolute; 
@@ -102,6 +98,9 @@
       display: flex;
       align-items: center;
       gap: 20px;
+      flex-wrap: wrap;
+      bottom: 0;
+      
       z-index: 3;
     }
 
@@ -113,6 +112,25 @@
       align-items: center;
       gap: 20px;
     }
+    @keyframes imageAnimation {
+      0% {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+      4% {
+        opacity: 1;
+      }
+      33% {
+        opacity: 1;
+      }
+      37% {
+        opacity: 0;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.1);
+      }}
     .navbar .menu-toggle, .navbar .watch-icon {
       color: rgba(255,255,255,0.8);
       font-size: 1.5rem;
@@ -143,3 +161,483 @@
       cursor: pointer;
     }
     .whatsapp-icon:hover { color: #1da851; }
+
+
+
+
+
+
+    @media screen and (max-width: 1200px) {
+      .social { 
+        position: absolute; 
+        top: 20px; 
+        right: 30px; 
+        display: flex; 
+        gap: 15px;
+        z-index: 2;
+      }
+      .social a { color: rgba(255,255,255,0.8); font-size: 1.5rem; transition: color .3s; }
+      .social a:hover { color: #fff; }
+      .social .whatsapp-top { color: #25D366; }
+      .social .whatsapp-top:hover { color: #1da851; }
+  
+      .nav-wrapper {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        bottom: 0;
+        position: absolute;
+        
+        z-index: 3;
+      }
+  
+      .navbar {
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 50px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+      }
+      @keyframes imageAnimation {
+        0% {
+          opacity: 0;
+          transform: scale(1.1);
+        }
+        4% {
+          opacity: 1;
+        }
+        33% {
+          opacity: 1;
+        }
+        37% {
+          opacity: 0;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(1.1);
+        }}
+      .navbar .menu-toggle, .navbar .watch-icon {
+        color: rgba(255,255,255,0.8);
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: color .3s;
+      }
+      .navbar .menu-toggle:hover, .navbar .watch-icon:hover { color: #fff; }
+  
+      .navbar ul { list-style: none; display: flex; gap: 30px; }
+      .navbar ul li a { color: #fff; text-decoration: none; font-weight: 500; transition: color .3s; }
+      .navbar ul li a:hover, .navbar ul li a.active { color: #ddd; }
+  
+      .navbar .btn-reserve {
+        padding: 10px 25px;
+        background: #777;
+        border-radius: 30px;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background .3s;
+      }
+      .navbar .btn-reserve:hover { background: #555; }
+  
+      .whatsapp-icon {
+        font-size: 2rem;
+        color: #25D366;
+        transition: color .3s;
+        cursor: pointer;
+      }
+      .whatsapp-icon:hover { color: #1da851; }
+  
+      
+  }
+  
+      @media screen and (max-width: 1200px) {
+        .hero {
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          overflow: hidden;
+        }
+  
+    
+    .image{
+        height: 98vh; width: 100%;
+        justify-content: center;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        animation: slideshow 25s infinite ease-in;
+        opacity: 0;
+        margin: 0;
+    }
+    @keyframes slideshow{
+        0%{opacity: 0;}
+        2%{opacity: 1;}
+        18%{opacity: 1;}
+        20%{opacity: 0;}
+        100%{opacity: 0;}
+    }
+    .image img{
+        position: absolute;
+        max-width: 20em; max-height: 20em;
+        left: 40%; top: 17%;
+    }
+    .image h1{
+        font-size: 10em;
+        color: grey;
+        margin-top: 20%;
+    }
+        .social { 
+          position: absolute; 
+          top: 20px; 
+          right: 30px; 
+          display: flex; 
+          gap: 15px;
+          z-index: 2;
+        }
+        .social a { color: rgba(255,255,255,0.8); font-size: 1.5rem; transition: color .3s; }
+        .social a:hover { color: #fff; }
+        .social .whatsapp-top { color: #25D366; }
+        .social .whatsapp-top:hover { color: #1da851; }
+    
+        .nav-wrapper {
+          position: absolute;
+          bottom: 50px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          flex-wrap: wrap;
+          bottom: 0;
+          
+          z-index: 3;
+        }
+    
+        .navbar {
+          background: rgba(0, 0, 0, 0.7);
+          border-radius: 50px;
+          padding: 10px 20px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          position: ;
+        }
+        @keyframes imageAnimation {
+          0% {
+            opacity: 0;
+            transform: scale(1.1);
+          }
+          4% {
+            opacity: 1;
+          }
+          33% {
+            opacity: 1;
+          }
+          37% {
+            opacity: 0;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1.1);
+          }}
+        .navbar .menu-toggle, .navbar .watch-icon {
+          color: rgba(255,255,255,0.8);
+          font-size: 1.5rem;
+          cursor: pointer;
+          transition: color .3s;
+        }
+        .navbar .menu-toggle:hover, .navbar .watch-icon:hover { color: #fff; }
+    
+        .navbar ul { list-style: none; display: flex; gap: 30px; }
+        .navbar ul li a { color: #fff; text-decoration: none; font-weight: 500; transition: color .3s; }
+        .navbar ul li a:hover, .navbar ul li a.active { color: #ddd; }
+    
+        .navbar .btn-reserve {
+          padding: 10px 25px;
+          background: #777;
+          border-radius: 30px;
+          color: #fff;
+          font-weight: 600;
+          text-decoration: none;
+          transition: background .3s;
+        }
+        .navbar .btn-reserve:hover { background: #555; }
+    
+        .whatsapp-icon {
+          font-size: 2rem;
+          color: #25D366;
+          transition: color .3s;
+          cursor: pointer;
+        }
+        .whatsapp-icon:hover { color: #1da851; }
+    
+
+      }
+      
+      @media screen and (max-width: 768px) {
+        .hero {
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          overflow: hidden;
+        }
+  
+    
+    .image{
+        height: 98vh; width: 100%;
+        justify-content: center;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        animation: slideshow 25s infinite ease-in;
+        opacity: 0;
+        margin: 0;
+    }
+    @keyframes slideshow{
+        0%{opacity: 0;}
+        2%{opacity: 1;}
+        18%{opacity: 1;}
+        20%{opacity: 0;}
+        100%{opacity: 0;}
+    }
+    .image img{
+        position: absolute;
+        max-width: 20em; max-height: 20em;
+        left: 40%; top: 17%;
+    }
+    .image h1{
+        font-size: 10em;
+        color: grey;
+        margin-top: 20%;
+    }
+        .social { 
+          position: absolute; 
+          top: 20px; 
+          right: 30px; 
+          display: flex; 
+          gap: 15px;
+          z-index: 2;
+        }
+        .social a { color: rgba(255,255,255,0.8); font-size: 1.5rem; transition: color .3s; }
+        .social a:hover { color: #fff; }
+        .social .whatsapp-top { color: #25D366; }
+        .social .whatsapp-top:hover { color: #1da851; }
+    
+        .nav-wrapper {
+          position: absolute;
+          bottom: 50px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          flex-wrap: wrap;
+          bottom: 0;
+          
+          z-index: 3;
+        }
+    
+        .navbar {
+          background: rgba(0, 0, 0, 0.7);
+          border-radius: 50px;
+          padding: 10px 20px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          position: absolute;
+        }
+        @keyframes imageAnimation {
+          0% {
+            opacity: 0;
+            transform: scale(1.1);
+          }
+          4% {
+            opacity: 1;
+          }
+          33% {
+            opacity: 1;
+          }
+          37% {
+            opacity: 0;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1.1);
+          }}
+        .navbar .menu-toggle, .navbar .watch-icon {
+          color: rgba(255,255,255,0.8);
+          font-size: 1.5rem;
+          cursor: pointer;
+          transition: color .3s;
+        }
+        .navbar .menu-toggle:hover, .navbar .watch-icon:hover { color: #fff; }
+    
+        .navbar ul { list-style: none; display: flex; gap: 30px; }
+        .navbar ul li a { color: #fff; text-decoration: none; font-weight: 500; transition: color .3s; }
+        .navbar ul li a:hover, .navbar ul li a.active { color: #ddd; }
+    
+        .navbar .btn-reserve {
+          padding: 10px 25px;
+          background: #777;
+          border-radius: 30px;
+          color: #fff;
+          font-weight: 600;
+          text-decoration: none;
+          transition: background .3s;
+        }
+        .navbar .btn-reserve:hover { background: #555; }
+    
+        .whatsapp-icon {
+          font-size: 2rem;
+          color: #25D366;
+          transition: color .3s;
+          cursor: pointer;
+        }
+        .whatsapp-icon:hover { color: #1da851; }
+    
+
+      }
+      
+      @media screen and (max-width: 480px) and (min-width:400px){
+        .hero {
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          overflow: hidden;
+        }
+  
+    
+    .image{
+        height: 98vh; width: 100%;
+        justify-content: center;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        animation: slideshow 25s infinite ease-in;
+        opacity: 0;
+        margin: 0;
+    }
+    @keyframes slideshow{
+        0%{opacity: 0;}
+        2%{opacity: 1;}
+        18%{opacity: 1;}
+        20%{opacity: 0;}
+        100%{opacity: 0;}
+    }
+    .image img{
+        position: absolute;
+        max-width: 20em; max-height: 20em;
+        left: 40%; top: 17%;
+    }
+    .image h1{
+        font-size: 10em;
+        color: grey;
+        margin-top: 20%;
+    }
+        .social { 
+          position: absolute; 
+          top: 20px; 
+          right: 30px; 
+          display: flex; 
+          gap: 15px;
+          z-index: 2;
+        }
+        .social a { color: rgba(255,255,255,0.8); font-size: 1.5rem; transition: color .3s; }
+        .social a:hover { color: #fff; }
+        .social .whatsapp-top { color: #25D366; }
+        .social .whatsapp-top:hover { color: #1da851; }
+    
+        .nav-wrapper {
+          position: absolute;
+          bottom: 50px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          flex-wrap: wrap;
+          bottom: 0;
+          
+          z-index: 3;
+        }
+    
+        .navbar {
+          background: rgba(0, 0, 0, 0.7);
+          border-radius: 50px;
+          padding: 10px 20px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+        @keyframes imageAnimation {
+          0% {
+            opacity: 0;
+            transform: scale(1.1);
+          }
+          4% {
+            opacity: 1;
+          }
+          33% {
+            opacity: 1;
+          }
+          37% {
+            opacity: 0;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1.1);
+          }}
+        .navbar .menu-toggle, .navbar .watch-icon {
+          color: rgba(255,255,255,0.8);
+          font-size: 1.5rem;
+          cursor: pointer;
+          transition: color .3s;
+        }
+        .navbar .menu-toggle:hover, .navbar .watch-icon:hover { color: #fff; }
+    
+        .navbar ul { list-style: none; display: flex; gap: 30px; }
+        .navbar ul li a { color: #fff; text-decoration: none; font-weight: 500; transition: color .3s; }
+        .navbar ul li a:hover, .navbar ul li a.active { color: #ddd; }
+    
+        .navbar .btn-reserve {
+          padding: 10px 25px;
+          background: #777;
+          border-radius: 30px;
+          color: #fff;
+          font-weight: 600;
+          text-decoration: none;
+          transition: background .3s;
+        }
+        .navbar .btn-reserve:hover { background: #555; }
+    
+        .whatsapp-icon {
+          font-size: 2rem;
+          color: #25D366;
+          transition: color .3s;
+          cursor: pointer;
+        }
+        .whatsapp-icon:hover { color: #1da851; }
+    
+
+          }
+
+          @media screen and (min-width: 400px){
+
+
+          }
+            
+          
